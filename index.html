@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NANDEMO-SHOP</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+</head>
+<body>
+    <header>
+        <h1>NANDEMO-SHOP</h1>
+    </header>
+
+    <main>
+        <h2 class="menu-title">メニュー</h2>
+        <p class="warning-text">※ 購入する場合は、以下のボタンを押してください。</p>
+
+        <div class="buttons-container">
+            <a href="https://example.com/item1" class="button">LINEアカウント 3000円</a>
+            <a href="https://example.com/item2" class="button">LINEアカウント作成方法 8000円</a>
+            <a href="https://example.com/item3" class="button">女07動画1本 50円</a>
+            <a href="https://example.com/item4" class="button">女07動画100本 3000円</a>
+            <a href="https://example.com/item5" class="button">ヤってる動画1本 30円</a>
+            <a href="https://example.com/item6" class="button">ヤってる動画150本 3000円</a>
+        </div>
+
+        <div class="navigation">
+            <button class="nav-button">＜ 前へ</button>
+            <button class="nav-button">次へ ＞</button>
+        </div>
+    </main>
+
+    <script>
+        function initializeLiff() {
+            liff.init({ liffId: "YOUR_LIFF_ID" })
+                .then(() => {
+                    if (!liff.isLoggedIn()) {
+                        liff.login();
+                    }
+                })
+                .catch(err => console.error('LIFFエラー:', err));
+        }
+
+        initializeLiff();
+    </script>
+</body>
+</html>
