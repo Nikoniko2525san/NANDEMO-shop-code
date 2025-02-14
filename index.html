@@ -21,13 +21,18 @@
             <a href="https://example.com/item2" class="button">LINEアカウント作成方法 15000円</a>
             <a href="https://example.com/item3" class="button">女07動画1本 50円</a>
             <a href="https://example.com/item4" class="button">女07動画100本 3000円</a>
-            <a href="https://example.com/item5" class="button">ヤってる動画1本 30円</a>
-            <a href="https://example.com/item6" class="button">ヤってる動画150本 3000円</a>
+            <a href="https://example.com/item5" class="button">ヤっている動画1本 30円</a>
+            <a href="https://example.com/item6" class="button">ヤっている動画150本 3000円</a>
         </div>
 
         <div class="navigation">
             <button class="nav-button">＜ 前へ</button>
             <button class="nav-button">次へ ＞</button>
+        </div>
+
+        <!-- 送金確認ボタン -->
+        <div class="confirmation">
+            <button class="confirm-button" onclick="redirectToForm()">送金後に押してください</button>
         </div>
     </main>
 
@@ -43,6 +48,11 @@
         }
 
         initializeLiff();
+
+        // Googleフォームにリダイレクトする関数
+        function redirectToForm() {
+            window.location.href = "https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform"; // GoogleフォームのURLに置き換える
+        }
     </script>
 </body>
 </html>
